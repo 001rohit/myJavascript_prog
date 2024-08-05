@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 90vh;
+        }
+        button{
+            padding: 10px;
+            font-size: 25px;
+        }
+    </style>
+</head>
+<body>
+    <button onclick=myfun() id="btn2">0</button>
+    <script>
+    // get html Element
+     const btn2 = document.getElementById("btn2")
+      
+    //    color list
+        const lst1 = ["red","orange","brown","green","blue","lime"]
+   
+        // initial count value 0
+        let count=0
+
+        // set time interval function
+        setInterval(()=>{
+            count++
+            if(count==7){
+                count=1
+            }
+            btn2.innerHTML = count-1
+            document.body.style.backgroundColor=lst1[count-1]
+        console.log(count-1)
+        },1000)
+    </script>
+</body>
+</html>
